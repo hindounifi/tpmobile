@@ -1,55 +1,54 @@
-DroidCafeOptions - Solution Code
-================================
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/V3k9yeN1)
+# Travail à faire
 
-App that demonstrates images used as buttons and a floating action button
-to launch a second activity, which demonstrates EditText input controls
-and radio buttons. This version includes options in the options menu of
-the app bar.
+## Créer et exécuter une application
 
-Introduction
-------------
+Créer une application qui utilise un `RecyclerView` pour afficher une liste de recettes. Chaque élément de la liste doit indiquer le nom de la recette avec une courte description. Lorsque l'utilisateur appuie sur une recette (un élément de la liste), démarrer une activité (`Activity`) qui affiche le texte complet de la recette.
 
-This app created from the Basic Activity template lets a user tap an image
-to make a choice. The app displays a Toast message showing the user’s choice.
-The app also uses an intent so that when the user taps the floating
-action button, it launches the second Activity. The second Activity
-demonstrates EditText input controls and radio buttons. This version
-includes options for the app bar options menu, in which some of the
-options appear as icons in the app bar.
+* Utiliser des éléments et un style `TextView` distincts pour le nom et la description de la recette.
+* Il est ossible d'utiliser un texte d'espace réservé (placeholder) pour les recettes complètes.
+* En option, ajouter une image du plat fini à chaque recette.
+* Cliquer sur le bouton Haut ramène l'utilisateur à la liste des recettes.
 
-Pre-requisites
---------------
+La capture d'écran ci-dessous montre un exemple d'implémentation simple. L'application peut avoir un aspect très différent, tant qu'elle dispose des fonctionnalités requises.
 
-You need to know:
-- How to open, build, and run apps with Android Studio.
-- Handling a Button click.
-- Editing an XML layout file.
-- Displaying a Toast message.
+![screenshot](./images/screenshot.png)
 
-Getting Started
----------------
+## Répondre à ces questions
 
-1. Download the code.
-2. Open the code in Android Studio.
-3. Run the app.
+### **Question 1**
 
+Laquelle des affirmations suivantes concernant une `RecyclerView` est fausse ? Choisissez-en un.
 
-License
--------
+- [ ] Un `RecyclerView` est un moyen plus économe en ressources pour afficher des listes déroulantes.
+- [ ] Il faut fournir une mise en page (layout) pour un seul élément de la liste.
+- [ ] Tous les éléments de la liste se ressemblent.
+- [x] on a pas besoin d'un gestionnaire de disposition (layout manager) avec un `RecyclerView` pour gérer la hiérarchie et la disposition des éléments `View`.
 
-Copyright 2018 Google, Inc.
+### **Question 2**
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
+Lequel des éléments suivants est le composant principal dont vous avez besoin pour fournir à un adaptateur un élément de vue et sa position dans un `RecyclerView`?Choisissez-en un.
 
-  http://www.apache.org/licenses/LICENSE-2.0
+- [ ] `RecyclerView`
+- [ ] `RecyclerView.Adapter`
+- [x] `RecyclerView.ViewHolder`
+- [ ] `AppCompatActivity`
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+### **Question 3**
+
+Quelle interface doit-on implémenter pour écouter et répondre aux clics des utilisateurs dans une `RecyclerView`? Choisissez-en un.
+
+- [x] `View.onClickListener`
+- [ ] `RecyclerView.Adapter`
+- [ ] `RecyclerView.ViewHolder`
+- [ ] `View.OnKeyListener`
+
+## Soumettez votre application pour la notation
+
+Vérifier que l'application dispose des fonctionnalités suivantes :
+
+* Implémente un `RecyclerView` qui affiche une liste déroulante de titres de recettes et de courtes descriptions.
+* Le code étend ou implémente `RecyclerView`, `RecyclerView.Adapter`, `RecyclerView.ViewHolder` et `View.OnClickListener`.
+* Cliquer sur un élément de la liste démarre une activité (`Activity`) qui affiche la recette complète.
+* Le fichier `AndroidManifest.xml` définit une relation parent de sorte que cliquer sur le bouton Haut dans une vue de recette revient à la liste des recettes.
+* `ViewHolder` contient une mise en page avec deux éléments `TextView`; par exemple, un `LinearLayout` avec deux éléments `TextView`.
