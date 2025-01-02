@@ -1,64 +1,55 @@
-# Compte Rendu HelloToast
+DroidCafeOptions - Solution Code
+================================
 
-## Description
+App that demonstrates images used as buttons and a floating action button
+to launch a second activity, which demonstrates EditText input controls
+and radio buttons. This version includes options in the options menu of
+the app bar.
 
-Cette application Android vous permet de créer une activité qui affiche un message "Hello!" et un nombre actuel à partir de la `MainActivity`. L'objectif est d'ajouter une nouvelle activité et de manipuler les `Intents` pour transférer des données entre activités.
+Introduction
+------------
 
-![alt text](image.png)
-![alt text](Capture2.PNG)
+This app created from the Basic Activity template lets a user tap an image
+to make a choice. The app displays a Toast message showing the user’s choice.
+The app also uses an intent so that when the user taps the floating
+action button, it launches the second Activity. The second Activity
+demonstrates EditText input controls and radio buttons. This version
+includes options for the app bar options menu, in which some of the
+options appear as icons in the app bar.
 
-## Questions et Réponses
+Pre-requisites
+--------------
 
-### Question 1
+You need to know:
+- How to open, build, and run apps with Android Studio.
+- Handling a Button click.
+- Editing an XML layout file.
+- Displaying a Toast message.
 
-**Quelles modifications sont apportées lorsque vous ajoutez une deuxième activité à votre application en choisissant `File > New > Activity` et un modèle d'activité ? Choisissez-en un :**
+Getting Started
+---------------
 
-- **Réponse :**  
-  La deuxième activité est ajoutée en tant que classe Java, le fichier de présentation (layout) XML est créé et le fichier `AndroidManifest.xml` est modifié pour déclarer une deuxième activité.
+1. Download the code.
+2. Open the code in Android Studio.
+3. Run the app.
 
-### Question 2
 
-**Que se passe-t-il si vous supprimez les éléments `android:parentActivityName` de la deuxième déclaration d'activité dans le fichier `AndroidManifest.xml` ? Choisissez-en un :**
+License
+-------
 
-- **Réponse :**  
-  Le bouton **Up** de la barre d'applications n'apparaît plus dans la deuxième activité pour renvoyer l'utilisateur à l'activité parente.
+Copyright 2018 Google, Inc.
 
-### Question 3
+Licensed to the Apache Software Foundation (ASF) under one or more contributor
+license agreements.  See the NOTICE file distributed with this work for
+additional information regarding copyright ownership.  The ASF licenses this
+file to you under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License.  You may obtain a copy of
+the License at
 
-**Quelle méthode de constructeur utilisez-vous pour créer une nouvelle intention (Intent) explicite ? Choisissez-en un :**
+  http://www.apache.org/licenses/LICENSE-2.0
 
-- **Réponse :**  
-  `new Intent(Context context, Class class)`
-
-  **Explication :**  
-  Pour créer une intention explicite, utilisez le constructeur `new Intent(Context context, Class class)`, qui permet de spécifier le contexte de l'activité actuelle et la classe de l'activité à démarrer.
-
-### Question 4
-
-**Dans l'application HelloToast (du Travail à faire), comment ajoutez-vous la valeur actuelle du comptage à l'intention (Intent) ? Choisissez-en un :**
-
-- **Réponse correcte :**  
-  Comme **extra** d'intention (Intent).
-
-  **Explication :**  
-  Pour transmettre la valeur du comptage à l'intention, vous pouvez utiliser la méthode `putExtra("key", value)` pour envoyer les données supplémentaires avec l'intention.
-
-### Question 5
-
-**Dans l'application HelloToast (du Travail à faire), comment afficher le nombre actuel dans la deuxième activité "Hello" ? Choisissez-en un :**
-
-- **Réponse correcte :**  
-  Tout ce qui précède.
-
-  **Explication :**  
-  Pour afficher le nombre actuel dans la deuxième activité, vous devez :
-
-  - Récupérer l'intention avec `getIntent()`.
-  - Obtenir la valeur du comptage à partir de l'intention avec `getIntent().getIntExtra("key", defaultValue)`.
-  - Mettre à jour le `TextView` avec la valeur du comptage.
-
-## Conclusion
-
-Cette application montre comment gérer les activités et les `Intents` dans une application Android, ainsi que la transmission de données entre elles. En ajoutant une nouvelle activité, vous pouvez explorer les fonctionnalités de gestion de la navigation et des données dans Android.
-
----
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+License for the specific language governing permissions and limitations under
+the License.
